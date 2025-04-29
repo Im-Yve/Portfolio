@@ -1,0 +1,116 @@
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #3b3939;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+select, input[type="text"], button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
+    box-sizing: border-box;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+input[type="text"] {
+    background-color: #e9ecef;
+    color: black;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+button {
+    background-color: #6c63ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a52e6;
+}
+
+.result-box {
+    background-color: #e9ecef;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Responsive font size */
+    color: black;
+    min-height: 40px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    word-wrap: break-word; /* Handle long results */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+    }
+
+    select, input[type="text"], button {
+        padding: 10px;
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+    }
+
+    select, input[type="text"], button {
+        padding: 12px;
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+}

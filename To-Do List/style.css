@@ -1,0 +1,219 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3b3939;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure full viewport height */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    /* Adjust width for smaller screens */
+    margin-top: 20px;
+    /* Reduce margin for mobile */
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 15px;
+    /* Smaller padding for mobile */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 2em;
+    /* Default size for small screens */
+    margin-bottom: 15px;
+}
+
+#message-container {
+    display: none;
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: border 0.5s;
+}
+
+input[type="text"]:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 15px;
+    /* Adjust padding for smaller screens */
+    background-color: #202122;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    /* Consistent font size */
+}
+
+button:hover {
+    background-color: #6e6e6e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    color: #000000;
+    border-radius: 5px;
+    margin: 8px 0;
+    /* Reduced margin for compact layout */
+    padding: 10px;
+    background-color: #f9f9f9;
+    animation: fadeIn 0.5s;
+    transition: background-color 0.3s;
+}
+
+li.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+li:hover {
+    background-color: #f1f1f1;
+}
+
+li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+li button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (min-width: 320px) {
+    .input-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        margin-right: 10px;
+        flex: 1;
+    }
+
+    button {
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+        /* Larger font for larger screens */
+    }
+
+    .container {
+        padding: 20px;
+        /* Increase padding for larger screens */
+    }
+
+    input[type="text"],
+    button {
+        font-size: 16px;
+        padding: 20px;
+        /* Increase padding for larger screens */
+    }
+
+    li {
+        margin: 10px 0;
+        /* Slightly more spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 20px;
+        /* Add padding to the body for large screens */
+    }
+
+    .container {
+        width: 80%;
+        /* Adjust width for larger screens */
+        max-width: 800px;
+        /* Allow for a wider container */
+    }
+
+    h1 {
+        font-size: 3em;
+        /* Even larger font for very large screens */
+    }
+
+    input[type="text"],
+    button {
+        padding: 25px;
+        /* Further increase padding for very large screens */
+    }
+
+    li {
+        margin: 12px 0;
+        /* More spacing for tasks */
+    }
+}

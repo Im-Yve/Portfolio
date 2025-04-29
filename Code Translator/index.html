@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Code Translator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TAPMORSE13</h1>
+        <label for="codeType">Choose a code type:</label>
+        <select id="codeType">
+            <option value="morse">Morse Code</option>
+            <option value="rot13">ROT-13</option>
+            <option value="tapcode">Tap Code</option>
+        </select>
+
+        <label for="text">Enter your text:</label>
+        <input type="text" id="text" placeholder="Type your text here...">
+        
+        <button onclick="generateCode()">Generate Code</button>
+        
+        <div id="result" class="result-box">Result will appear here</div>
+        
+        <button id="copyButton" onclick="copyToClipboard()">Copy</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
