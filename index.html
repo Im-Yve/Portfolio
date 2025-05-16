@@ -37,26 +37,32 @@
             <a class="navbar-brand" href="#">
                 <span class="logo-text">Yve</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <span></span>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">Contact</a>
-                    </li>
+            <!-- Desktop Navigation -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">Contact</a>
+                </li>
+            </ul>
+            <!-- Mobile Navigation -->
+            <div id="menuToggle">
+                <input type="checkbox" id="menuCheckbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li><a href="#home"><label for="menuCheckbox" onclick="this.parentNode.click();">Home</label></a></li>
+                    <li><a href="#about"><label for="menuCheckbox" onclick="this.parentNode.click();">About</label></a></li>
+                    <li><a href="#portfolio"><label for="menuCheckbox" onclick="this.parentNode.click();">Projects</label></a></li>
+                    <li><a href="#footer"><label for="menuCheckbox" onclick="this.parentNode.click();">Contact</label></a></li>
                 </ul>
             </div>
         </div>
